@@ -1,0 +1,19 @@
+{
+  "build": {
+    "development": {
+      "env": {
+        "EXPO_ANDROID_GOOGLE_SERVICES_JSON": "@GOOGLE_SERVICES_JSON"
+      }
+    },
+    "preview": {
+      "env": {
+        "EXPO_ANDROID_GOOGLE_SERVICES_JSON": "@GOOGLE_SERVICES_JSON"
+      }
+    },
+    "production": {
+      "env": {
+        "EXPO_ANDROID_GOOGLE_SERVICES_JSON": "@GOOGLE_SERVICES_JSON"
+      }
+    }
+  }
+}
