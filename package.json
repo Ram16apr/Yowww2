@@ -8,10 +8,10 @@
   "android": "expo run:android",
   "ios": "expo run:ios",
   "web": "expo start --web",
-  "prebuild": "node scripts/setupFirebase.js",
   "postinstall": "expo prebuild --platform android --non-interactive",
   "lint": "expo lint"
 },
+
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
     "@react-native-async-storage/async-storage": "2.2.0",
