@@ -8,7 +8,7 @@
   "android": "expo run:android",
   "ios": "expo run:ios",
   "web": "expo start --web",
-  "postinstall": "expo prebuild --platform android --non-interactive",
+  "postinstall": "mkdir -p android/app && cp google-services.json android/app/google-services.json && CI=1 expo prebuild --platform android"
   "lint": "expo lint"
 },
 
