@@ -2,7 +2,6 @@
   "expo": {
     "name": "yowww-fresh",
     "slug": "yowww-fresh",
-    "workflow": "bare",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
