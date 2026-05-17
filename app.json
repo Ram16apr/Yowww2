@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "yowww-fresh",
-    "slug": "yowww-fresh",
+    "slug": "yowww14may",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -73,6 +73,7 @@
       "eas": {
         "projectId": "616f466e-3390-42d1-ac6c-47ce97f1298d"
       }
-    }
+    },
+    "owner": "yowww14may"
   }
 }
