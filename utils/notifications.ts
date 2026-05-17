@@ -1,7 +1,7 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import { Platform } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // ✅ Configure how notifications appear when app is open
 Notifications.setNotificationHandler({
@@ -47,11 +47,15 @@ export async function registerForPushNotifications(): Promise<string | null> {
   }
 
   // Get FCM token
-  const token = await Notifications.getDevicePushTokenAsync();
-  console.log("FCM Token:", token.data);
+  const token = await Notifications.getExpoPushTokenAsync({
+    projectId: "616f466e-3390-42d1-ac6c-47ce97f1298d",
+  });
 
-  // Save token to AsyncStorage
-  await AsyncStorage.setItem("fcm_token", token.data);
+  console.log("Expo Push Token:", token.data);
+
+  alert(token.data);
+
+  await AsyncStorage.setItem("expo_push_token", token.data);
 
   return token.data;
 }
@@ -79,7 +83,7 @@ export async function sendFcmTokenToBackend(fcmToken: string) {
         body: JSON.stringify({
           cm_firebase_token: fcmToken,
         }),
-      }
+      },
     );
 
     const data = await res.json();
