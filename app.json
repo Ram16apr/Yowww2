@@ -59,8 +59,7 @@
         {
           "icon": "./assets/images/icon.png",
           "color": "#E3AE01",
-          "androidMode": "default",
-          "androidCollapsedTitle": "Yowww Order Update"
+          "defaultChannel": "default"
         }
       ]
     ],
